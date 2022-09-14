@@ -12,9 +12,11 @@ function Header() {
 
   return (
     <Container>
-      <a>
-        <img src="/images/logo.svg" alt=""/>
-      </a>
+      <CustomImg>
+        <a href="img">
+          <img src="/images/logo.svg" alt=""/>
+        </a>
+      </CustomImg>
       <Menu>
           {cars && cars.map((car, index) => 
           <a key={index} href='#'>{car}</a>
@@ -124,4 +126,8 @@ const Menu = styled.div `
   const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+  `
+
+  const CustomImg = styled.div`
+  cursor: pointer;
   `
